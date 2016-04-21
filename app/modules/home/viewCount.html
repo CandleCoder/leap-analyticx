@@ -10,20 +10,17 @@
                    class="demo-header-searchbox _md-text">
           </md-select-header>
           <md-optgroup label="courses">
-            <md-option ng-value="course" ng-repeat="course in courses |
-              filter:searchTerm">{{course}}</md-option>
+            <md-option ng-value="course" ng-repeat="course in courses track by $index">{{course}}</md-option>
           </md-optgroup>
         </md-select>
-  
+
   <md-datepicker ng-model="startDate"  md-placeholder="Enter start date"></md-datepicker>
-  
+
   <md-datepicker ng-model="endDate" md-placeholder="Enter end date"></md-datepicker>
   </div>
 
   <div layout="row" layout-wrap  md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6">
-   
-  
+
+
   <div google-chart chart="chartObject" style="height:600px; width:100%;"></div>
   </div>
-  
-
